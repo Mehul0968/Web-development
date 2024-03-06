@@ -1,0 +1,2 @@
+A website to help create and track a list of tasks and mark them as complete or delete them. The tasks are stored locally and will stay on the website even when the browser is closed or refreshed.
+
