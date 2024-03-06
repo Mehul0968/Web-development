@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    .box
+    {
+      background-color:#F806CC;
+      height:100px;
+      width:100px;
+      border-radius:50%;
+      margin-right:0px;
+      margin-bottom:0px;
+    }
+  </style>
+  <body>
+    <h1>Test Your Reactions</h1>
+    <h3>Click on circles and boxes as quickly as you can</h3>
+    <h3>Your Time: <span id="time">0.00</span>s</h3>
+    <div class="box" id="boxx">
+    </div>
+    <script type="text/javascript">
+      function createRandomBox()
+      {
+        var colorArr = ["F4E06D","FF7396","C499BA","4C3A51","A0D995","1B2430","1363DF","94B49F","CDF0EA","9EB23B"];
+        var rand = Math.floor(Math.random()*88 + 5);
+        var x;
+        x=rand%10;
+        document.getElementById("boxx").style.marginLeft = rand + "%";
+        document.getElementById("boxx").style.marginTop = rand/3 + "%";
+        document.getElementById("boxx").style.backgroundColor = "#" + colorArr[x];
+        if(rand%2==0)
+        {
+          document.getElementById("boxx").style.borderRadius = 0 + "%";
+        }
+        else
+        {
+            document.getElementById("boxx").style.borderRadius = 50 + "%";
+        }
+      }
+      var start = performance.now();
+      start=start/1000;
+      document.getElementById("boxx").onclick = function()
+      {
+        for(var i=0;i<1000000;++i);
+        createRandomBox();
+        var end = performance.now();
+        end=end/1000;
+        timeDiff = end-start;
+        timeDiff=timeDiff.toFixed(3);
+        document.getElementById("time").innerHTML = timeDiff;
+        start = end;
+      }
+    </script>
+  </body>
+</html>

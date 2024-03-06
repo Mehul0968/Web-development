@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Changing Website Content</title>
+    </head>
+    <body>
+      <input type="text" id="input">
+      <button id="changeText">Click to change text!</button>
+      <p id="changedText">This is a paragraph</p>
+    	<script type="text/javascript">
+          document.getElementById("changeText").onclick = function()
+          {
+            var str="";
+            str=document.getElementById("input").value;
+            document.getElementById("changedText").innerHTML=str;
+          }
+      </script>
+    </body>
+</html>

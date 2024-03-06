@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3 id = "par"></h3>
+    <button type="button" name="button" id = "Y">Yes</button>
+    <button type="button" name="button" id = "N">No</button>
+    <script type="text/javascript">
+      var x = 1;
+      var i=0;
+      document.getElementById("par").innerHTML = "You are holding up " + i + " fingers";
+      if(x==1)
+      {
+        document.getElementById("Y").onclick = function()
+        {
+          alert("GG");
+          location.reload();
+          x=0;
+        }
+        document.getElementById("N").onclick = function()
+        {
+          document.getElementById("par").innerHTML = "You are holding up " + ++i + " fingers";
+        }
+      }
+
+    </script>
+  </body>
+</html>

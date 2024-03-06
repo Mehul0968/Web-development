@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style media="screen">
+    #dot1 {
+      height: 50px;
+      width: 50px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    #dot2 {
+      height: 50px;
+      width: 50px;
+      background-color: blue;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    #dot3 {
+      height: 50px;
+      width: 50px;
+      background-color: green;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    #diss
+    {
+      position:absolute;
+      top:80px;
+      left:30px;
+    }
+  </style>
+  <body>
+    <span id="dot1"></span>
+    <span id="dot2"></span>
+    <span id="dot3"></span>
+    <script type="text/javascript">
+      document.getElementById("dot1").onclick = function()
+      {
+        document.getElementById("dot1").style.display="none";
+      }
+      document.getElementById("dot2").onclick = function()
+      {
+        document.getElementById("dot2").style.display="none";
+      }
+      document.getElementById("dot3").onclick = function()
+      {
+        document.getElementById("dot3").style.display="none";
+      }
+
+    </script>
+  </body>
+</html>

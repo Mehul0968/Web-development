@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>How many fingers am I holding up?</h3>
+    <input type="number" id="input" value="">
+    <button type="button" id="butt">Enter</button>
+    <script type="text/javascript">
+      document.getElementById("butt").onclick = function()
+      {
+        var fin = document.getElementById("input").value;
+        var ran = Math.floor((Math.random() * 6) + 1);
+        if(fin == ran)
+        {
+          alert("Si");
+        }
+        else {
+          alert("No");
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+
+            
